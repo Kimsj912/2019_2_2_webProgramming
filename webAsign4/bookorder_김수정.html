@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트 과제: 책 선택</title>
+    <style>
+      table{
+        width : 500px;
+      }
+    </style>
+    <script>
+      var StrArr = new Array("1:웹 프로그래밍의 이해","2:데이터베이스의 이해","3:시스템 프로그래밍의 이해");
+     var bookStr ="";
+     var booknum =1;
+     booknum = prompt("책 번호를 입력하시오... \n"+StrArr[0]+" \n"+StrArr[1]+" \n"+StrArr[2]);
+     switch(booknum){
+       case "1":
+          bookStr=StrArr[0];
+          break;
+       case "2":
+          bookStr=StrArr[1];
+          break;
+
+       case "3":
+          bookStr=StrArr[2];
+          break;
+
+       default:
+     }
+     if(bookStr!=""){
+       var now = new Date();
+       document.write("<table border='1'><caption>책 주문 입력 내용</caption>"+
+                      "<thead><tr><th>제목</th></tr></thead>"+
+                      "<tbody><tr><td>"+bookStr
+                      +" (주문시간: "+now.toLocaleString()+")"
+                      +"</td></tr></tbody></table>")
+     }else{
+       alert("리스트에 없는 책을 선택하셨습니다.");
+       document.write("<table border='1' width='500px'><caption>책 주문 입력 내용</caption>"+
+                      "<thead><tr><th>제목</th></tr></thead>"+
+                      "<tbody><tr><td>"+bookStr
+                      +"</td></tr></tbody></table>")
+     }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

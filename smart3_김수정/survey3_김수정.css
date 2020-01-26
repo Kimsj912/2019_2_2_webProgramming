@@ -1,0 +1,15 @@
+@import url(smart3_김수정.css);
+
+form{
+  
+  background-color: pink;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-style: none;
+}
+
+span.formspan{
+  font-family: "gothic", "고딕", sans-serif;
+  font-weight: bold;
+  color: blue;
+}

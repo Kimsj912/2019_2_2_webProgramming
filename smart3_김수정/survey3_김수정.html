@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>소프트웨어 기술 선호에 대한 설문지</title>
+    <style type="text/css">
+      @import url(survey3_김수정.css);
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>설문지</h1>
+      <div><p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p></div>
+    </header>
+
+    <section>
+      <form >
+        <p>
+        <span class="formspan">학년</span>
+        <label for="g1"><input type="radio" name="grade" id="g1" value="g1" checked>1학년</label>
+        <label for="g2"><input type="radio" name="grade" id="g2" value="g2">2학년</label>
+        <label for="g3"><input type="radio" name="grade" id="g3" value="g3">3학년</label>
+        <label for="g4"><input type="radio" name="grade" id="g4" value="g4">4학년</label>
+      </p>
+
+      <p>
+          <span class="formspan">성별</span>
+        <label for="male"><input type="radio" name="gender" id="male" value="male">남</label>
+        <label for="female"><input type="radio" name="gender" id="female"  value="female" checked>여</label>
+      </p>
+
+      <p>
+        <span class="formspan">관심 분야</span>
+        <select name="interst">
+          <option value="MobileSW" selected>모바일 소프트웨어</option>
+          <option value="frontend">Front-End</option>
+          <option value="backend">Back-End</option>
+          <option value="game">게임</option>
+          <option value="embeded">임베디드</option>
+        </select>
+        </p>
+
+        <p>
+        <span class="formspan">진로(다중 선택)</span>
+        <label for="develop"><input type="checkbox" name="Course" value="develop" id="develop" checked>개발</label>
+        <label for="plan"><input type="checkbox" name="Course" value="plan" id="plan">기획</label>
+        <label for="sales"><input type="checkbox" name="Course" value="sales" id="sales">영업</label>
+        <label for="founded"><input type="checkbox" name="Course" value="founded" id="founded">창업</label>
+        </p>
+
+        <p>
+        <span class="formspan">남기고 싶은 말 <textarea name="additional" rows="10" cols="50" placeholder="글을 남겨주세요."></textarea></span>
+        </p>
+
+      </section>
+    <footer>
+      <p>Made by sujeong Kim</p>
+    </footer>
+  </body>
+</html>

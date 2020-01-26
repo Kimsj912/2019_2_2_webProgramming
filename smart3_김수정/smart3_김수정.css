@@ -1,0 +1,41 @@
+body{/*바탕*/
+  background-color: aliceblue;
+}
+h1{/*제목*/
+  color: brown;
+  text-align : center;
+}
+
+p{
+  font-family: 휴먼편지체;
+  text-indent : 1em;
+   font-size: 1em;
+
+ }
+
+div > p { /*헤더 밑 직선 테구리*/
+  padding-bottom: 10px;
+  border-bottom-width: 1px;
+  border-color: black;
+  border-bottom-style: solid;
+}
+
+ h3 {/*헤딩*/
+  text-shadow : 2px 2px 3px blue;
+  color : blue;
+
+}
+a{/*밑줄삭제*/
+  text-decoration : none ;
+
+}
+
+nav > ul{/*목차*/
+  border-style: dotted;
+  border-width: 1px;
+}
+
+footer{/*footer*/
+  background-color: orange;
+  border-radius : 10px;
+}

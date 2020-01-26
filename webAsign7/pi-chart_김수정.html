@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>캔버스에 파이 차트 그리기</title>
+  <script>
+    var colors = ["blue", "green", "yellow", "magenta", "red"];
+    var grades = ["A", "B", "C", "D", "F"];
+    var pichart = [];
+
+    function draw() {
+      var inputs = document.getElementsByTagName("input");
+      var sum = 0;
+      for (i = 0; i < grades.length; i++) {
+        sum += parseInt(inputs[i].value);
+        pichart[i] = parseInt(inputs[i].value);
+      }
+      for (i = 0; i < grades.length; i++) {
+        pichart[i] = pichart[i] / sum * 100;
+      }
+      var canvas = document.getElementById("myCanvas");
+      var context = canvas.getContext("2d");
+      var stloc = 20;
+      var start = 0
+
+      context.clearRect(0, 0, 600, 500);
+      for (i = 0; i < grades.length; i++) {
+        context.beginPath();
+        context.fillStyle = colors[i];
+        context.moveTo(300, 250);
+        var end = start + (3.6 * pichart[i] * Math.PI / 180);
+        context.arc(300, 250, 200, start, end, false);
+        context.closePath();
+        context.fill();
+        start = end;
+        var string = grades[i] + " 학점" + parseInt(pichart[i]) + "% : " + colors[i];
+        context.font = "15px sans-serif";
+        context.fillStyle = "blue";
+        context.fillText(string, 10, stloc);
+        stloc += 20;
+
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+  <h3>학점 별로 학생 수를 입력하면 파이 차트로 비율 그리기</h3>
+  <hr>
+  <label>A <input type='number' value='0'> 명 </label>
+  <label>B <input type='number' value='0'> 명 </label>
+  <label>C <input type='number' value='0'> 명</label>
+  <br>
+  <label>D <input type='number' value='0'> 명</label>
+  <label>F <input type='number' value='0'> 명</label>
+  <input type="button" name="" value="차트 그리기" onclick="draw()">
+  <br>
+  <canvas id="myCanvas" width="600" height="500" style="background-color: aliceblue"></canvas>
+
+</body>
+
+</html>

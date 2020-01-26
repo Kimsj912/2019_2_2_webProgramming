@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>라면을끓이는순서</title>
+</head>
+<script>
+  function addItem(parent) {
+    var ramen = prompt("라면을 끓이는 순서를 입력하라");
+    if (ramen != "" && ramen!=null) {
+      var olobj = document.getElementById("parent");
+      var newli = document.createElement("li");
+      newli.innerHTML = ramen;
+      olobj.appendChild(newli);
+    }
+  }
+</script>
+
+<body>
+  <h3>라면을끓이는순서</h3>
+  <hr>
+  <ol type="A" id="parent" style="background-color:yellowgreen" onClick="addItem(this)">
+    <li>물을 끓인다.</li>
+</body>
+
+</html>
