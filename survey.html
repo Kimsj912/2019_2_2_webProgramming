@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>소프트웨어 기술 선호에 대한 설문지</title>
+  </head>
+  <body>
+    <header>
+      <h1>설문지</h1>
+      <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+    </header>
+    <hr>
+    <section>
+      <form class="grade"  method="get">
+        학년
+        <label for="g1"><input type="radio" name="grade" id="g1" value="g1" checked>1학년</label>
+        <label for="g2"><input type="radio" name="grade" id="g2" value="g2">2학년</label>
+        <label for="g3"><input type="radio" name="grade" id="g3" value="g3">3학년</label>
+        <label for="g4"><input type="radio" name="grade" id="g4" value="g4">4학년</label>
+
+      </form>
+      <form class="gender"  method="get">
+          성별
+        <label for="male"><input type="radio" name="gender" id="male" value="male">남</label>
+        <label for="female"><input type="radio" name="gender" id="female"  value="female">여</label>
+      </form>
+      <form class="interst"  method="get">
+        관심 분야
+        <select name="interst">
+          <option value="MobileSW" selected>모바일 소프트웨어</option>
+          <option value="frontend">Front-End</option>
+          <option value="backend">Back-End</option>
+          <option value="game">게임</option>
+          <option value="embeded">임베디드</option>
+        </select>
+      </form>
+      <form class="Course"  method="get">
+        진로
+        <label for="develop"><input type="checkbox" name="Course" value="develop" id="develop" checked>개발</label>
+        <label for="plan"><input type="checkbox" name="Course" value="plan" id="plan">기획</label>
+        <label for="sales"><input type="checkbox" name="Course" value="sales" id="sales">영업</label>
+        <label for="founded"><input type="checkbox" name="Course" value="founded" id="founded">창업</label>
+      </form>
+      <form class="additional"  method="get">
+        남기고 싶은 말 <textarea name="additional" rows="10" cols="50" placeholder>글을 남겨주세요.
+        </textarea>
+      </form>
+    </section>
+    <footer>
+      <p>Made by sujeong Kim</p>
+    </footer>
+  </body>
+</html>
